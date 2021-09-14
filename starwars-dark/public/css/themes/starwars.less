@@ -1,4 +1,4 @@
-/*theme based on solarized-dark.less */
+/* theme based on solarized-dark.less */
 
 @base01: #494949;
 @base00: #657b83;
@@ -32,22 +32,45 @@
 #orb-infrastructure,
 #orb-metrics,
 #orb-notifactions {
-  display: none !important;
+	display: none !important;
+}
+
+.login-form {
+	background-color: rgba(30, 30, 30, 0.5) !important;
+	border-radius   : 20px !important;
 }
 
 #orb-icinga {
 
-  filter : hue-rotate(50deg) !important;
-  opacity: 0.1;
+	filter : hue-rotate(50deg) !important;
+	opacity: 0.1;
+}
+
+#header-logo-container {
+	padding      : 5px !important;
+	padding-left : 0px !important;
+	padding-right: 0px !important;
+}
+
+textarea,
+option,
+select {
+	background-color: #333333 !important;
+	color           : white !important;
+}
+
+.errors,
+select {
+	border-radius: 25px !important;
 }
 
 input {
-  border-radius   : 25px !important;
-  border          : none !important;
-  outline         : none !important;
-  padding         : 10px !important;
-  background-color: #333333 !important;
-  color           : white !important;
+	border-radius   : 25px !important;
+	border          : none !important;
+	outline         : none !important;
+	padding         : 10px !important;
+	background-color: #333333 !important;
+	color           : white !important;
 }
 
 a,
@@ -55,193 +78,200 @@ label,
 option,
 span {
 
-  color: white !important;
+	color: white !important;
 
 }
 
 select {
 
-  background-color: #333333 !important;
+	background-color: #333333 !important;
 
 }
 
 .button-link {
-  color: black !important;
+	color: black !important;
 }
 
 .primary-nav {
-  margin-top: 15px;
+	margin-top: 15px;
 }
 
 ul {
 
-  background-color: #333333 !important;
-  margin-right    : 5px !important;
+	background-color: #333333 !important;
+	margin-right    : 5px !important;
 
 }
 
 li {
-  background-color: #333333 !important;
-  color           : white !important;
+	background-color: #333333 !important;
+	color           : white !important;
 }
 
+
 .action-link {
-  color: @link-color;
+	color: @link-color;
 }
 
 input,
 select {
-  background-color: @body-bg-color;
+	background-color: @body-bg-color;
 }
 
+// Icinga colors
 @icinga-blue: #232323;
 
 #login {
-  background-image: url(../img/starwars-dark/wallpaper.jpg);
+	background-image: url(../img/starwars-dark/wallpaper.jpg);
 }
 
 label {
-  color: @icinga-blue;
+	color: @icinga-blue;
 }
 
-#header-logo {
-  background-image: url(../img/starwars-dark/icon.png);
+#header-logo,
+#icinga-logo {
+	background-image: url(../img/starwars-dark/icon.png) !important;
 }
 
 #layout:not(.minimal-layout).sidebar-collapsed #header-logo {
-  background-image: url(../img/starwars-dark/icon.png);
+	background-image: url(../img/starwars-dark/icon.png);
 }
 
 #menu {
-  background-color: @base01;
+	background-color: @base01;
 
-  input.search {
-    color           : @text-color;
-    background-image: url(../img/icons/search_white.png);
+	input.search {
+		color           : @text-color;
+		background-image: url(../img/icons/search_white.png);
 
-    &:focus {
-      background-image: url(../img/icons/search_white.png) !important;
-    }
-  }
+		&:focus {
+			background-image: url(../img/icons/search_white.png) !important;
+		}
+	}
 
-  .nav-level-1>.nav-item {
-    color: @text-color;
+	.nav-level-1>.nav-item {
+		color: @text-color;
 
-    &.active,
-    &:hover {
-      color           : #ffffff;
-      background-color: #33373a;
-    }
-  }
+		&.active,
+		&:hover {
+			color           : #ffffff;
+			background-color: #33373a;
+		}
+	}
 
-  .nav-level-2>.nav-item {
-    color           : @text-color;
-    background-color: @base03;
+	.nav-level-2>.nav-item {
+		color           : @text-color;
+		background-color: @base03;
 
-    &.active,
-    &:hover {
-      a {
-        color: #ffffff;
-      }
+		&.active,
+		&:hover {
+			a {
+				color: #ffffff;
+			}
 
-      background-color: @base01;
-    }
-  }
+			background-color: @base01;
+		}
+	}
 
-  .nav-itemxx {
+	.nav-itemxx {
 
-    &:hover,
-    &:hover>a,
-    &.active,
-    &.active>a {
-      color: #ffffff !important;
-    }
-  }
+		&:hover,
+		&:hover>a,
+		&.active,
+		&.active>a {
+			color             : #ffffff !important;
+			//background-color: @base01 !important;
+		}
+	}
 }
 
 .boxview a:focus {
-  color          : @text-color;
-  text-decoration: underline;
+	color          : @text-color;
+	text-decoration: underline;
 }
 
 .icinga-module.module-monitoring {
-  @timeline-notification-color  : #1650CF;
-  @timeline-hard-state-color    : #A24600;
-  @timeline-comment-color       : #346964;
-  @timeline-ack-color           : #855D18;
-  @timeline-downtime-start-color: #515151;
-  @timeline-downtime-end-color  : #5e5e2f;
+	@timeline-notification-color  : #1650CF;
+	@timeline-hard-state-color    : #A24600;
+	@timeline-comment-color       : #346964;
+	@timeline-ack-color           : #855D18;
+	@timeline-downtime-start-color: #515151;
+	@timeline-downtime-end-color  : #5e5e2f;
 
-  .timeline-notification {
-    background-color: @timeline-notification-color;
+	// Unfortunately it does not suffice to only override the timeline colors here, because our less compiler seems to
+	// have the related style block in module.less already evaluated
 
-    &.extrapolated {
-      background-color: lighten(@timeline-notification-color, 20%);
-    }
-  }
+	.timeline-notification {
+		background-color: @timeline-notification-color;
 
-  .timeline-hard-state {
-    background-color: @timeline-hard-state-color;
+		&.extrapolated {
+			background-color: lighten(@timeline-notification-color, 20%);
+		}
+	}
 
-    &.extrapolated {
-      background-color: lighten(@timeline-hard-state-color, 20%);
-    }
-  }
+	.timeline-hard-state {
+		background-color: @timeline-hard-state-color;
 
-  .timeline-comment {
-    background-color: @timeline-comment-color;
+		&.extrapolated {
+			background-color: lighten(@timeline-hard-state-color, 20%);
+		}
+	}
 
-    &.extrapolated {
-      background-color: lighten(@timeline-comment-color, 20%);
-    }
-  }
+	.timeline-comment {
+		background-color: @timeline-comment-color;
 
-  .timeline-ack {
-    background-color: @timeline-ack-color;
+		&.extrapolated {
+			background-color: lighten(@timeline-comment-color, 20%);
+		}
+	}
 
-    &.extrapolated {
-      background-color: lighten(@timeline-ack-color, 20%);
-    }
-  }
+	.timeline-ack {
+		background-color: @timeline-ack-color;
 
-  .timeline-downtime-start {
-    background-color: @timeline-downtime-start-color;
+		&.extrapolated {
+			background-color: lighten(@timeline-ack-color, 20%);
+		}
+	}
 
-    &.extrapolated {
-      background-color: lighten(@timeline-downtime-start-color, 20%);
-    }
-  }
+	.timeline-downtime-start {
+		background-color: @timeline-downtime-start-color;
 
-  .timeline-downtime-end {
-    background-color: @timeline-downtime-end-color;
+		&.extrapolated {
+			background-color: lighten(@timeline-downtime-start-color, 20%);
+		}
+	}
 
-    &.extrapolated {
-      background-color: lighten(@timeline-downtime-end-color, 20%);
-    }
-  }
+	.timeline-downtime-end {
+		background-color: @timeline-downtime-end-color;
+
+		&.extrapolated {
+			background-color: lighten(@timeline-downtime-end-color, 20%);
+		}
+	}
 }
 
 .icinga-module.module-monitoring {
-  .tactical {
-    .box {
-      border-color: @body-bg-color  !important;
-    }
+	.tactical {
+		.box {
+			border-color: @body-bg-color  !important;
+		}
 
-    div.box.contents {
-      background: @body-bg-color;
-    }
-  }
+		div.box.contents {
+			background: @body-bg-color;
+		}
+	}
 }
 
 .nav-item>a:hover {
-  color: #ffffff !important;
+	color: #ffffff !important;
 }
 
 #toggle-sidebar {
-  color: #ffffff !important;
+	color: #ffffff !important;
 }
 
 #mobile-menu-toggle {
-  color     : #ffffff !important;
-  text-align: right;
+	color     : #ffffff !important;
+	text-align: right;
 }
